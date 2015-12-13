@@ -25,8 +25,8 @@ public class UseTimeControlDB {
 			new String[] { username + "" });
 		if (c.moveToFirst()) {
 			u.setUsername(c.getString(c.getColumnIndex("username")));
-			u.setStart(c.getInt(c.getColumnIndex("start")));
-			u.setEnd(c.getInt(c.getColumnIndex("end")));
+			u.setStart(c.getString(c.getColumnIndex("start")));
+			u.setEnd(c.getString(c.getColumnIndex("end")));
 			Log.i("selectInfo-----u.getUsername",u.getUsername()+"数据库里面有相同的数据");
 			Log.i("selectInfo-----u.getStart",u.getStart()+"");		
 			Log.i("selectInfo-----u.getEnd",u.getEnd()+"");				
@@ -73,8 +73,8 @@ public class UseTimeControlDB {
 		UseTimeControl u = new UseTimeControl();
 		if (c.moveToNext()) {
 			u.setUsername(username);
-			u.setStart(c.getInt(c.getColumnIndex("start")));
-			u.setEnd(c.getInt(c.getColumnIndex("end")));
+			u.setStart(c.getString(c.getColumnIndex("start")));
+			u.setEnd(c.getString(c.getColumnIndex("end")));
 		}
 		return u;
 	}
@@ -93,8 +93,8 @@ public class UseTimeControlDB {
 		while (c.moveToNext()) {
 			UseTimeControl u = new UseTimeControl();
 			u.setUsername(c.getString(c.getColumnIndex("username")));
-			u.setStart(c.getInt(c.getColumnIndex("start")));
-			u.setEnd(c.getInt(c.getColumnIndex("end")));
+			u.setStart(c.getString(c.getColumnIndex("start")));
+			u.setEnd(c.getString(c.getColumnIndex("end")));
 			list.add(u);
 		}
 		c.close();

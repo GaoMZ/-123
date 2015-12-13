@@ -19,7 +19,7 @@ public class DBOpenHelper extends SQLiteOpenHelper{
 			"timeOfContinuousUse real," + 
 			"timeOfContinuousListen integer," +
 			"channelId  text,"+
-			"iscommit integer default 0"+
+			"isCommit integer default 0"+
 			")";
 	
 	private static final String CREATE_USETIMECONTROL="CREATE table  usetimeControl"+
@@ -37,14 +37,14 @@ public class DBOpenHelper extends SQLiteOpenHelper{
 			"longtitude rear,"+
 			"latitude rear," +
 			"distance rear," +
-			"iscommit integer default 0"+
+			"isCommit integer default 0"+
 			")";
 	
 	private static final String CREATE_RELATIONSHIP="create table  relationship( "+	/*IF NOT EXISTS*/
 			"id integer primary key ,"+
 			"childname text," +
 			"parentname text, "+
-			"iscommit integer default 0"+
+			"isCommit integer default 0"+
 			")";
 	
 	private static final String CREATE_TRACK="create table  track( "+/*"IF NOT EXISTS"*/
@@ -53,8 +53,8 @@ public class DBOpenHelper extends SQLiteOpenHelper{
 			"longtitude rear,"+
 			"latitude rear," +
 			"addTime text,"+
-			"datestring text,"+
-			"iscommit integer default 0"+
+			"dateString text,"+
+			"isCommit integer default 0"+
 			")";
 	
 	

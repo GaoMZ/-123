@@ -3,39 +3,43 @@ package com.njupt.kangaroo.dao;
 public class UseTimeControl {
 
 	private String username;
-	private int start;
-	private int end;
-	
+	//如start="12:10:00"  end="23:30:00" ----24小时制
+	private String start;
+	private String end;
+	private int isCommit;
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public int getStart() {
+	public String getStart() {
 		return start;
 	}
-	public void setStart(int start) {
+	public void setStart(String start) {
 		this.start = start;
 	}
-	public int getEnd() {
+	public String getEnd() {
 		return end;
 	}
-	public void setEnd(int end) {
+	public void setEnd(String end) {
 		this.end = end;
 	}
+	public int getIsCommit() {
+		return isCommit;
+	}
+	public void setIsCommit(int isCommit) {
+		this.isCommit = isCommit;
+	}
+	public UseTimeControl(String username, String start, String end) {
+		super();
+		this.username = username;
+		this.start = start;
+		this.end = end;
+		this.isCommit = 0;
+	}
 	public UseTimeControl() {
-		// TODO Auto-generated constructor stub
-	}
-	public UseTimeControl(String username,int start,int end) {
-		// TODO Auto-generated constructor stub
-		this.setUsername(username);
-		this.setStart(start);
-		this.setEnd(end);
-	}
-	@Override
-	public String toString() {
-		return "UseTimeControl [username=" + username + ", start=" + start
-				+ ", end=" + end + "]";
-	}
+	
+	}	
+	
 }

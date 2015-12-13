@@ -49,8 +49,8 @@ public class TestUseTimeControl extends Activity{
 			public void onClick(View v) {
 			UseTimeControlDB useTimeControlDB=new UseTimeControlDB(getApplicationContext());
 			List<UseTimeControl> list=new ArrayList<UseTimeControl>();		
-			UseTimeControl timeControl1=new UseTimeControl("jack",12,14);
-			UseTimeControl timeControl2=new UseTimeControl("marry",14,18);			
+			UseTimeControl timeControl1=new UseTimeControl("jack","12:10:00","14:00:00");
+			UseTimeControl timeControl2=new UseTimeControl("marry","13:00:00","19:20:00");			
 			list.add(timeControl1);
 			list.add(timeControl2);
 			useTimeControlDB.addUseTimeControl(list);
@@ -63,7 +63,7 @@ public class TestUseTimeControl extends Activity{
 			
 			public void onClick(View v) {
 				UseTimeControlDB useTimeControlDB=new UseTimeControlDB(getApplicationContext());
-				UseTimeControl timeControl=new UseTimeControl("jack",90,10);
+				UseTimeControl timeControl=new UseTimeControl("jack","10:00:00","13:40:00");
 				useTimeControlDB.update(timeControl);
 			}
 		});
@@ -71,7 +71,7 @@ public class TestUseTimeControl extends Activity{
 			
 			public void onClick(View v) {
 				UseTimeControlDB useTimeControlDB=new UseTimeControlDB(getApplicationContext());
-				UseTimeControl timeControl=new UseTimeControl("jack",90,10);
+				UseTimeControl timeControl=new UseTimeControl("jack","10:00:00","20:20:00");
 				UseTimeControl control=useTimeControlDB.selectInfo(timeControl.getUsername());
 				if(timeControl.equals(control)){
 					//useTimeControlDB.delUseTimeControl(timeControl);	
